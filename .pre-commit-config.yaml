@@ -1,0 +1,21 @@
+# Installiert automatisch den pre-commit- und den pre-push-Hook
+default_install_hook_types: [pre-commit, pre-push]
+
+repos:
+  # Bei jedem commit: Code automatisch formatieren
+  - repo: https://github.com/psf/black
+    rev: 24.8.0
+    hooks:
+      - id: black
+        stages: [pre-commit]
+
+  # Bei jedem push: Tests ausführen
+  - repo: local
+    hooks:
+      - id: pytest
+        name: pytest
+        entry: python -m pytest
+        language: system
+        pass_filenames: false
+        always_run: true
+        stages: [pre-push]
