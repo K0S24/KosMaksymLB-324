@@ -40,6 +40,6 @@ Die `.env` ist in der `.gitignore` und kommt deshalb nie auf github. Das Passwor
 3. **+ Add** klicken, Name `PASSWORD`, Wert = Wert aus der `.env` (auf Azure: mein github-Benutzername), **Apply** und nochmals **Apply / Save** klicken, Neustart bestätigen.
 4. Die App liest den Wert mit `os.getenv("PASSWORD")` aus den Umgebungsvariablen, genau wie lokal aus der `.env`.
 
-Startup Command (Settings → Configuration → General settings): `gunicorn --bind=0.0.0.0 --timeout 600 app:app`
+Startup Command (Settings → Configuration → Stack settings): `gunicorn --bind=0.0.0.0 --timeout 600 app:app`
 
 **Automatische Auslieferung:** Im Deployment Center ist die github-Ablage mit dem Ast `main` verbunden. Azure hat dafür die Datei `.github/workflows/main_*.yml` erstellt, welche bei jedem push auf `main` (also bei jedem erfolgreichen merge in `main`) die Applikation neu auf Azure ausliefert.
