@@ -31,7 +31,7 @@ Manuell alle Hooks ausführen: `pre-commit run --all-files` bzw. `pre-commit run
 ## Aufgabe 4
 Erklären Sie hier, wie Sie das Passwort aus Ihrer lokalen `.env` auf Azure übertragen.
 
-**URL der Applikation:** https://DEIN-APP-NAME.azurewebsites.net
+**URL der Applikation:** https://kosmaksym-lb324-gzbkfwe2a9bmdydm.germanywestcentral-01.azurewebsites.net
 
 Die `.env` ist in der `.gitignore` und kommt deshalb nie auf github. Das Passwort wird darum von Hand in Azure eingetragen:
 
